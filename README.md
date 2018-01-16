@@ -7,7 +7,7 @@ Follow very simple examples in the sample LegcyTableView project.
 
 
  Application Demo
-<img src="screen_shots/legacy-demo.gif"/>
+<img src="screen_shots/legacy-demo.gif width="200" height="400" />
 
 # Examples
 This project covers the following examples
