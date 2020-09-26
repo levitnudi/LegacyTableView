@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LegacyTableViewDemoActivity">
+    <item
+        android:id="@+id/action_about_id"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_about"
+        android:title="About"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_share_id"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_share"
+        android:title="Share"
+        app:showAsAction="always"/>
+</menu>
