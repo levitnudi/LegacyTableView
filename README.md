@@ -43,7 +43,8 @@ Add jitpack.io to your root gradle file
  
  ```gradle
        dependencies {
-	                implementation project(':legacytableview')
+	                implementation 'com.github.levitnudi:LegacyTableView:master-SNAPSHOT'
+			
 	}
 
 
