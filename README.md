@@ -275,4 +275,4 @@ limitations under the License.
  
 # Author : Levit Nudi [![LinkedIn](http://www.fftimes.com/sites/all/modules/socialmedia/icons/levelten/glossy/32x32/linkedin.png)](https://www.linkedin.com/in/levitnudi/)
 
-[![LinkedIn](https://www.newsforpublic.com/wp-content/uploads/2015/08/buy-me-a-coffee.png)](https://levitnudi7.wixsite.com/legacy)
+[![LinkedIn](https://www.newsforpublic.com/wp-content/uploads/2015/08/buy-me-a-coffee.png)](https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=6QKNS4V5Y3XWJ)
