@@ -13,6 +13,11 @@ import android.widget.ListView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+
 import static com.levitnudi.legacytableview.LegacyTableView.DESKTOP;
 import static com.levitnudi.legacytableview.LegacyTableView.ECOKENYA;
 import static com.levitnudi.legacytableview.LegacyTableView.GOLDALINE;
@@ -41,6 +46,7 @@ import static com.levitnudi.legacytableview.LegacyTableView.SKELETON;
  */
 public class LegacyThemesDemoActivity extends AppCompatActivity {
     ListView listView;
+    private InterstitialAd interstitialAd;
 
     @Override
     public void onBackPressed(){
@@ -143,6 +149,33 @@ public class LegacyThemesDemoActivity extends AppCompatActivity {
 
             }
         });
+
+
+        // Create the InterstitialAd and set the adUnitId (defined in values/strings.xml).
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
+        interstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                interstitialAd.show();
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Proceed to the next level.
+
+            }
+        });
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .setRequestAgent("android_studio:ad_template").build();
+        interstitialAd.loadAd(adRequest);
+
     }
 
 

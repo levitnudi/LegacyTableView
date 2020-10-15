@@ -1,13 +1,9 @@
 <resources>
     <string name="app_name">LegacyTableView</string>
-    <string name="title_activity_list">ListActivity</string>
     <string name="footer_text">LegacyTableView Copyright &#169; , Levit Nudi</string>
 
     <!-- AboutActivity-->
     <string name="version_number">Version</string>
-    <string name="about_author">Author: </string>
-    <string name="about_author_names" translatable="false">Levit Nudi</string>
-    <string name="about_affiliation">From Noton Inc, notioninside&#8482;</string>
     <string name="more_info">More information :</string>
     <string name="privacy_friendly">This is a simple light weight android library that will help you
         include from simple to complex customizable tables in your project. Get data from arrays, databases, excel files etc. You can customize to suit your needs.
@@ -16,5 +12,18 @@
     <string name="linkein"><a href="https://www.linkedin.com/in/levitnudi/">\nAbout the author (Linkedin)</a></string>
     <string name="buy_me_cofee"><a href="https://levitnudi7.wixsite.com/legacy">\nIf you like this, buy me cofee! :)</a></string>
     <string name="title_activity_update_table_demo">UpdateTableDemo</string>
+
+
+    <string name="banner_ad_unit_id">ca-app-pub-2269598660144559/8432311214</string>
+    <string name="admob_app_id">ca-app-pub-2269598660144559~9621609117</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-2269598660144559/5397285468</string>
+
+
+    <!--
+    Test Ads
+        <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_app_id">ca-app-pub-8816146097346757~1103904972</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    -->
 
 </resources>

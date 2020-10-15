@@ -38,7 +38,7 @@ public class LegacyTableView extends WebView {
     private static String TABLE_CONTENT_STRINGS = "";
     private static String TABLE_TITLE_STRINGS = "";
     private static String TABLE_FOOTER = "";
-    public static int INITIAL_SIZE = 100;
+    public static int INITIAL_SIZE = 0;
     public String TABLE_BOX_SHADOW = "#888888";
     private static String TABLE_BORDER_SOLID = "#07214f";
     private static String TABLE_BACKGROUND_ODD = "#ffffff";

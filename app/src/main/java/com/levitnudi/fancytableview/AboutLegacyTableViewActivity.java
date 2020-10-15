@@ -10,6 +10,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 /*
  * Copyright 2018 Levit Nudi
  *
@@ -55,6 +58,13 @@ public class AboutLegacyTableViewActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.textFieldVersionName)).setText(BuildConfig.VERSION_NAME);
 
         overridePendingTransition(0, 0);
+
+
+        // Load an ad into the AdMob banner view.
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .setRequestAgent("android_studio:ad_template").build();
+        adView.loadAd(adRequest);
 
     }
 

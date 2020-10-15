@@ -5,6 +5,10 @@ import android.view.MenuItem;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.levitnudi.legacytableview.LegacyTableView;
 
 /*
@@ -23,7 +27,7 @@ import com.levitnudi.legacytableview.LegacyTableView;
  * limitations under the License.
  */
 public class LegacyTableViewThemes extends AppCompatActivity {
-
+    private InterstitialAd interstitialAd;
     //declare your table header labels
     int THEME = 0;
     String THEME_NAME = "LegacyTableViewThemes";
@@ -83,6 +87,32 @@ public class LegacyTableViewThemes extends AppCompatActivity {
         //remember to build your table as the last step
         legacyTableView.build();
 
+
+
+        // Create the InterstitialAd and set the adUnitId (defined in values/strings.xml).
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
+        interstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                interstitialAd.show();
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Proceed to the next level.
+
+            }
+        });
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .setRequestAgent("android_studio:ad_template").build();
+        interstitialAd.loadAd(adRequest);
 
     }
 

@@ -13,6 +13,11 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+
 /*
  * Copyright 2018 Levit Nudi
  *
@@ -30,6 +35,7 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 public class LegacyTableViewDemoActivity extends AppCompatActivity {
     ListView listView;
+    private InterstitialAd interstitialAd;
 
     @Override
     public void onBackPressed(){
@@ -86,6 +92,33 @@ public class LegacyTableViewDemoActivity extends AppCompatActivity {
 
             }
         });
+
+
+        // Create the InterstitialAd and set the adUnitId (defined in values/strings.xml).
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
+        interstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                interstitialAd.show();
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Proceed to the next level.
+
+            }
+        });
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .setRequestAgent("android_studio:ad_template").build();
+        interstitialAd.loadAd(adRequest);
+
     }
 
 

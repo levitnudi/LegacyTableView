@@ -6,6 +6,8 @@ import android.view.MenuItem;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.levitnudi.legacytableview.LegacyTableView;
 
 /*
@@ -68,6 +70,7 @@ public class SimpleLegacyTableView extends AppCompatActivity {
 
         //remember to build your table as the last step
         legacyTableView.build();
+
 
 
     }

@@ -7,6 +7,8 @@ import android.view.MenuItem;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.levitnudi.legacytableview.LegacyTableView;
 import static com.levitnudi.legacytableview.LegacyTableView.BOLD;
 import static com.levitnudi.legacytableview.LegacyTableView.CENTER;
@@ -105,6 +107,7 @@ public class CustomLegacyTableView extends AppCompatActivity {
         //tableView.setInitialScale(100);//default initial scale is 0 (normal size)
         tableView.setContentTextColor("#009688");
         tableView.build();
+
 
     }
 

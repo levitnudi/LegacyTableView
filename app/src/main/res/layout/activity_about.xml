@@ -12,10 +12,10 @@
     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     * See the License for the specific language governing permissions and
     * limitations under the License.-->
-<RelativeLayout android:id="@+id/relativeLayout"
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
     android:id="@+id/main_content"
@@ -43,7 +43,6 @@
             android:layout_weight="0.36">
 
             <ImageView
-                android:id="@+id/legacy_table_view_logo"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:adjustViewBounds="true"
@@ -52,7 +51,6 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/appName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -146,4 +144,15 @@
 
     </LinearLayout>
 </ScrollView>
+
+    <!-- view for AdMob Banner Ad -->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id" />
+
 </RelativeLayout>
